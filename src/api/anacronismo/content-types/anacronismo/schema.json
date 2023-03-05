@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "anacronismos",
+  "info": {
+    "singularName": "anacronismo",
+    "pluralName": "anacronismos",
+    "displayName": "Anacronismos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "enunciado": {
+      "type": "text"
+    },
+    "imagens": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::imagen.imagen",
+      "inversedBy": "anacronismos"
+    }
+  }
+}

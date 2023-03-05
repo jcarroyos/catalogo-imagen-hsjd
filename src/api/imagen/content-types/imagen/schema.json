@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "imagenes",
+  "info": {
+    "singularName": "imagen",
+    "pluralName": "imagenes",
+    "displayName": "Imágenes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "escena": {
+      "type": "enumeration",
+      "enum": [
+        "tercera",
+        "cuarta",
+        "quinta"
+      ]
+    },
+    "src": {
+      "type": "string",
+      "required": true
+    },
+    "sintomas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sintoma.sintoma",
+      "mappedBy": "imagens"
+    },
+    "anacronismos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::anacronismo.anacronismo",
+      "mappedBy": "imagens"
+    }
+  }
+}
